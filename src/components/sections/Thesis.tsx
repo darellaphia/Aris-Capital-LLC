@@ -2,10 +2,26 @@ import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 
 const drivers = [
-  { num: '01', label: 'AI & Data Centers' },
-  { num: '02', label: 'Grid Modernization' },
-  { num: '03', label: 'Domestic Manufacturing' },
-  { num: '04', label: 'Electrification' },
+  {
+    num: '01',
+    label: 'AI & Data Centers',
+    body: 'Hyperscale data center construction is accelerating across the Sun Belt. Each facility requires continuous backup power and high-voltage electrical maintenance — creating sustained, non-discretionary demand for generator service and commercial electrical contractors.',
+  },
+  {
+    num: '02',
+    label: 'Grid Modernization',
+    body: 'Aging U.S. grid infrastructure requires unprecedented investment in upgrades, substations, and distributed energy resources. Qualified electrical contractors with licensed workforces are the bottleneck — and the beneficiary.',
+  },
+  {
+    num: '03',
+    label: 'Domestic Manufacturing',
+    body: 'Reshoring of semiconductor fabs, EV battery plants, and defense manufacturing is driving industrial electrical load not seen in decades. These facilities depend on certified service contractors for compliance, maintenance, and uptime.',
+  },
+  {
+    num: '04',
+    label: 'Electrification',
+    body: 'The transition from fossil fuels to electric systems — across transportation, HVAC, and industrial processes — is expanding the total addressable market for electrical service businesses in every geography we target.',
+  },
 ]
 
 function FadeIn({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
@@ -72,9 +88,10 @@ export function Thesis() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 flex-1">
             {drivers.map((d, i) => (
               <FadeIn key={d.num} delay={0.15 + i * 0.08}>
-                <div className="border border-border rounded p-6 h-full">
-                  <p className="text-teal text-xs font-bold tracking-label mb-3">{d.num}</p>
+                <div className="border border-border rounded p-6 h-full flex flex-col gap-3">
+                  <p className="text-teal text-xs font-bold tracking-label">{d.num}</p>
                   <p className="text-navy text-sm font-semibold leading-snug">{d.label}</p>
+                  <p className="text-steel text-xs leading-relaxed">{d.body}</p>
                 </div>
               </FadeIn>
             ))}

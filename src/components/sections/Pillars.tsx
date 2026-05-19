@@ -1,23 +1,22 @@
-import { motion } from 'framer-motion'
-import { useInView } from 'framer-motion'
 import { useRef } from 'react'
+import { motion, useInView } from 'framer-motion'
 
-const pillars = [
+const values = [
   {
-    heading: 'Operator-Led',
-    body: "Founder-operated. We don't flip — we run, grow, and build for the long term.",
+    heading: 'Mutual',
+    body: 'No one-sided deals. We structure terms that are financially fair and respect what you have built.',
   },
   {
-    heading: 'Sector-Specific',
-    body: "Energy infrastructure services only. We're not generalists — this is the only thing we do.",
+    heading: 'People-Focused',
+    body: 'Your team made this business what it is. We intend to keep it that way.',
   },
   {
-    heading: 'Seller-Respectful',
-    body: "Transparent process. Fair terms. We preserve what you've built.",
+    heading: 'Long-Term',
+    body: 'We are not buying to flip. We are buying to build on what you started.',
   },
 ]
 
-function Pillar({ heading, body, index }: { heading: string; body: string; index: number }) {
+function Value({ heading, body, index }: { heading: string; body: string; index: number }) {
   const ref = useRef(null)
   const inView = useInView(ref, { once: true, margin: '-80px' })
 
@@ -38,12 +37,24 @@ function Pillar({ heading, body, index }: { heading: string; body: string; index
 }
 
 export function Pillars() {
+  const ref = useRef(null)
+  const inView = useInView(ref, { once: true, margin: '-80px' })
+
   return (
     <section className="bg-navy py-20">
       <div className="max-w-6xl mx-auto px-6">
+        <motion.p
+          ref={ref}
+          className="section-label mb-12"
+          initial={{ opacity: 0, y: 16 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5 }}
+        >
+          Why Sell to Us
+        </motion.p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
-          {pillars.map((p, i) => (
-            <Pillar key={p.heading} {...p} index={i} />
+          {values.map((v, i) => (
+            <Value key={v.heading} {...v} index={i} />
           ))}
         </div>
       </div>

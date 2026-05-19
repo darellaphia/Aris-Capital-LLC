@@ -68,10 +68,19 @@ export function Criteria() {
             <h2 className="section-heading mb-4">Is your business a fit?</h2>
           </FadeIn>
           <FadeIn delay={0.2}>
+            <p className="section-body mb-4">
+              We acquire generator service and maintenance companies, commercial electrical
+              contractors, and light manufacturers supplying the energy infrastructure supply
+              chain. The business should have at least 7 years of operating history, $700K to
+              $1.5M in EBITDA, and an experienced team already in place.
+            </p>
+          </FadeIn>
+          <FadeIn delay={0.3}>
             <p className="section-body">
-              We focus exclusively on energy infrastructure service businesses with proven
-              cash flows, licensed workforces, and recurring maintenance revenue. If your
-              business matches these parameters, we want to hear from you.
+              The ideal seller is a founder ready to transition — whether due to retirement,
+              succession, or simply wanting to step back from the day-to-day. If growth has
+              been limited by your bandwidth rather than the market, that's exactly the kind
+              of business we look for.
             </p>
           </FadeIn>
         </div>

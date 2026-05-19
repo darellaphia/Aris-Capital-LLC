@@ -12,16 +12,17 @@ const tags = [
 const pillars = [
   { label: 'Sales Leadership', detail: '10+ years enterprise sales and revenue leadership across technology and services verticals.' },
   { label: 'Project Management', detail: 'Fortune 500-trained PM methodology applied to deal execution, transitions, and operations.' },
-  { label: 'Entrepreneurship', detail: 'Founded and operated multiple ventures — understands what builders need from a buyer.' },
-  { label: 'Energy Roots', detail: 'Grew up in energy infrastructure. This is not a thesis — it is lived context.' },
+  { label: 'Entrepreneurship', detail: 'Founder and CEO of Cresco Consult LLC — understands what builders need from a buyer.' },
+  { label: 'Energy Roots', detail: 'Grew up around Egbin Power Station, Nigeria. This is not a thesis — it is lived context.' },
 ]
 
-function FadeIn({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
+function FadeIn({ children, delay = 0, className = '' }: { children: React.ReactNode; delay?: number; className?: string }) {
   const ref = useRef(null)
-  const inView = useInView(ref, { once: true, margin: '-80px' })
+  const inView = useInView(ref, { once: true, margin: '0px' })
   return (
     <motion.div
       ref={ref}
+      className={className}
       initial={{ opacity: 0, y: 20 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, delay }}
@@ -34,74 +35,92 @@ function FadeIn({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
 export function Operator() {
   return (
     <section id="operator" className="bg-white py-24">
-      <div className="max-w-4xl mx-auto px-6">
-        {/* Label */}
-        <FadeIn>
-          <p className="section-label mb-6">The Operator</p>
-        </FadeIn>
+      <div className="max-w-6xl mx-auto px-6">
 
-        {/* Name + title */}
-        <FadeIn delay={0.1}>
-          <h2 className="text-4xl font-bold text-navy mb-2">Dare Ayansola</h2>
-        </FadeIn>
-        <FadeIn delay={0.15}>
-          <p className="text-xs font-bold uppercase tracking-label text-teal mb-8">
-            Founder & Managing Principal, Aris Capital
-          </p>
-        </FadeIn>
+        {/* Two-column: photo + content */}
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-start mb-16">
 
-        {/* Pull quote */}
-        <FadeIn delay={0.2}>
-          <blockquote className="border-l-2 border-teal pl-6 mb-10">
-            <p className="text-xl italic text-navy leading-relaxed">
-              "Energy infrastructure is not a sector I discovered. It is one I grew up inside."
-            </p>
-          </blockquote>
-        </FadeIn>
+          {/* Photo column */}
+          <FadeIn className="lg:col-span-2">
+            <div className="relative">
+              <div className="aspect-[3/4] overflow-hidden rounded-sm border-l-2 border-teal">
+                <img
+                  src="/headshot.jpg"
+                  alt="Dare Ayansola"
+                  className="w-full h-full object-cover"
+                  style={{ objectPosition: 'center 15%' }}
+                />
+              </div>
+              {/* Teal accent block */}
+              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-teal/10 border border-teal/30 -z-10 rounded-sm" />
+            </div>
+          </FadeIn>
 
-        {/* Bio */}
-        <FadeIn delay={0.25}>
-          <p className="section-body mb-5">
-            Dare Ayansola is a sales leader, project manager, and entrepreneur with a background
-            spanning Fortune 500 technology companies, federal contracting, and energy services.
-            He has spent his career at the intersection of infrastructure, operations, and
-            growth — and founded Aris Capital to acquire and operate the businesses he
-            understands best.
-          </p>
-        </FadeIn>
-        <FadeIn delay={0.3}>
-          <p className="section-body mb-10">
-            As a member of Alpha Phi Alpha Fraternity Inc. and a 2026 NMC bETA Fellow, Dare
-            brings a networks-and-relationships approach to M&A — prioritizing seller trust,
-            workforce continuity, and long-term operational stewardship over financial engineering.
-          </p>
-        </FadeIn>
+          {/* Content column */}
+          <div className="lg:col-span-3">
+            <FadeIn>
+              <p className="section-label mb-5">Meet the Operator</p>
+            </FadeIn>
 
-        {/* Credential tags */}
-        <FadeIn delay={0.35}>
-          <div className="flex flex-wrap gap-2 mb-14">
-            {tags.map((t) => (
-              <span
-                key={t}
-                className="px-3 py-1 text-xs font-semibold border border-border text-steel rounded-full"
-              >
-                {t}
-              </span>
-            ))}
+            <FadeIn delay={0.1}>
+              <h2 className="text-4xl font-bold text-navy mb-1">Dare Ayansola</h2>
+            </FadeIn>
+            <FadeIn delay={0.15}>
+              <p className="text-xs font-bold uppercase tracking-label text-teal mb-8">
+                Founder & Managing Principal, Aris Capital LLC
+              </p>
+            </FadeIn>
+
+            <FadeIn delay={0.2}>
+              <blockquote className="border-l-2 border-teal pl-5 mb-8">
+                <p className="text-lg italic text-navy leading-relaxed">
+                  "Energy infrastructure is not a sector I discovered. It is one I grew up inside."
+                </p>
+              </blockquote>
+            </FadeIn>
+
+            <FadeIn delay={0.25}>
+              <p className="section-body mb-4">
+                Dare Ayansola is the founder and managing principal of Aris Capital LLC. He grew up
+                around one of the largest thermal power stations in Nigeria — his father spent his
+                career there as an instrumentation and control engineer. Energy infrastructure is not
+                a sector he discovered. It is one he grew up inside.
+              </p>
+            </FadeIn>
+            <FadeIn delay={0.3}>
+              <p className="section-body mb-8">
+                His background spans senior project management at a Fortune 500 company, sales and
+                finance leadership, and entrepreneurship as founder and CEO of Cresco Consult LLC,
+                a federal contracting firm. He is a 2026 fellow of the New Majority Capital bETA
+                acquisition accelerator.
+              </p>
+            </FadeIn>
+
+            <FadeIn delay={0.35}>
+              <div className="flex flex-wrap gap-2">
+                {tags.map((t) => (
+                  <span
+                    key={t}
+                    className="px-3 py-1 text-xs font-semibold border border-border text-steel rounded-full"
+                  >
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </FadeIn>
           </div>
-        </FadeIn>
+        </div>
 
         {/* 4-column credential pillars */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 border-t border-border pt-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 border-t border-border pt-10">
           {pillars.map((p, i) => (
             <FadeIn key={p.label} delay={0.1 + i * 0.08}>
-              <div>
-                <p className="text-xs font-bold uppercase tracking-label text-teal mb-2">{p.label}</p>
-                <p className="text-xs text-steel leading-relaxed">{p.detail}</p>
-              </div>
+              <p className="text-xs font-bold uppercase tracking-label text-teal mb-2">{p.label}</p>
+              <p className="text-xs text-steel leading-relaxed">{p.detail}</p>
             </FadeIn>
           ))}
         </div>
+
       </div>
     </section>
   )

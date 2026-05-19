@@ -3,9 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { cn } from '@/lib/utils'
 
 const links = [
-  { label: 'Our Thesis', href: '#thesis' },
+  { label: 'Our Process', href: '#process' },
   { label: 'What We Look For', href: '#criteria' },
-  { label: 'The Operator', href: '#operator' },
 ]
 
 export function Nav() {
@@ -25,13 +24,13 @@ export function Nav() {
         scrolled && 'shadow-[0_2px_24px_0_rgba(13,31,60,0.08)]',
       )}
     >
-      <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        {/* Logo */}
-        <a href="#" className="flex items-center">
+      <nav className="max-w-6xl mx-auto px-6 h-24 flex items-center justify-between">
+        {/* Logo — transparent PNG, no whitespace issues */}
+        <a href="#" className="flex-shrink-0">
           <img
-            src="/logo-dark.jpg"
+            src="/logo.png"
             alt="Aris Capital"
-            className="h-8 w-auto object-contain"
+            style={{ height: '56px', width: 'auto' }}
           />
         </a>
 
@@ -48,7 +47,7 @@ export function Nav() {
           ))}
           <a
             href="#contact"
-            className="ml-2 px-5 py-2 bg-navy text-white text-sm font-semibold rounded hover:bg-navy-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2 active:scale-95 transition-all duration-150"
+            className="ml-2 px-5 py-2 bg-navy text-white text-sm font-semibold rounded hover:bg-navy-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2 active:scale-95 transition-transform duration-150"
           >
             Get In Touch
           </a>
@@ -74,7 +73,7 @@ export function Nav() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.18 }}
-            className="lg:hidden absolute inset-x-0 top-16 bg-white border-t border-border shadow-lg"
+            className="lg:hidden absolute inset-x-0 top-24 bg-white border-t border-border shadow-lg"
           >
             <div className="flex flex-col px-6 py-6 gap-6">
               {links.map((l) => (
@@ -90,7 +89,7 @@ export function Nav() {
               <a
                 href="#contact"
                 onClick={() => setOpen(false)}
-                className="mt-2 px-5 py-3 bg-navy text-white text-sm font-semibold rounded text-center hover:bg-navy-light active:scale-95 transition-all duration-150"
+                className="mt-2 px-5 py-3 bg-navy text-white text-sm font-semibold rounded text-center hover:bg-navy-light active:scale-95 transition-transform duration-150"
               >
                 Get In Touch
               </a>
