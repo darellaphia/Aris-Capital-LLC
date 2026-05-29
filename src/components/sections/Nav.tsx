@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { cn } from '@/lib/utils'
 
 const links = [
+  { label: 'The Thesis', href: '#thesis' },
   { label: 'Our Process', href: '#process' },
   { label: 'What We Look For', href: '#criteria' },
 ]
