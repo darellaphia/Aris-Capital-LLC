@@ -2,7 +2,7 @@ import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 
 const metrics = [
-  { value: '$700K–$1.5M', label: 'EBITDA' },
+  { value: '$500K–$1.5M', label: 'EBITDA' },
   { value: '$2M–$5M', label: 'Deal Range' },
   { value: '7+ Years', label: 'Op. History' },
 ]
@@ -11,17 +11,17 @@ const criteria = [
   {
     heading: 'Business Type',
     items: [
-      'Generator service & maintenance',
-      'Commercial electrical contractors',
-      'Light manufacturing',
+      'Power & Electrical services',
+      'Water & Wastewater services',
+      'Cooling & Refrigeration services',
+      'Industrial Infrastructure services',
       'Compliance-driven customer base',
-      'Licensed workforce',
     ],
   },
   {
     heading: 'Financials',
     items: [
-      '$700K–$1.5M EBITDA',
+      '$500K–$1.5M EBITDA',
       '$2M–$5M deal size',
       'Recurring revenue preferred',
       'Clean books',
@@ -35,7 +35,7 @@ const criteria = [
       '10–20% seller note',
       'Seller willing to transition',
       'Founder-owned preferred',
-      'TX · GA · AZ · VA',
+      'TX · NC · GA · AZ',
     ],
   },
 ]
@@ -69,18 +69,19 @@ export function Criteria() {
           </FadeIn>
           <FadeIn delay={0.2}>
             <p className="section-body mb-4">
-              We acquire generator service and maintenance companies, commercial electrical
-              contractors, and light manufacturers supplying the energy infrastructure supply
-              chain. The business should have at least 7 years of operating history, $700K to
-              $1.5M in EBITDA, and an experienced team already in place.
+              We acquire essential infrastructure service businesses — companies that keep
+              critical systems running for industrial, commercial, and government customers.
+              Power, water, cooling, controls, waste — if it's essential, recurring,
+              compliance-driven, and the customer cannot afford downtime, it fits. The business
+              should have at least 7 years of operating history and $500K to $1.5M in EBITDA.
             </p>
           </FadeIn>
           <FadeIn delay={0.3}>
             <p className="section-body">
-              The ideal seller is a founder ready to transition — whether due to retirement,
-              succession, or simply wanting to step back from the day-to-day. If growth has
-              been limited by your bandwidth rather than the market, that's exactly the kind
-              of business we look for.
+              The ideal seller is a founder-owned operator with strong existing operations,
+              limited by succession, constrained sales capacity, or the absence of strategic
+              management. Built something real. Hit a ceiling. That's exactly who we're
+              looking for.
             </p>
           </FadeIn>
         </div>

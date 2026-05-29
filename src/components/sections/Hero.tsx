@@ -3,9 +3,9 @@ import { MeshGradient, PulsingBorder } from '@paper-design/shaders-react'
 
 const pills = [
   { label: 'Texas · Primary Market' },
+  { label: 'North Carolina' },
   { label: 'Georgia' },
   { label: 'Arizona' },
-  { label: 'Virginia' },
   { label: 'SBA 7(a) Financed' },
 ]
 
@@ -68,9 +68,11 @@ export function Hero() {
           animate="visible"
           variants={fadeUp}
         >
-          We acquire generator service and maintenance companies and commercial
-          electrical contractors from founders ready to transition — and we run
-          them for the long term.
+          We acquire essential infrastructure service businesses — companies that
+          keep critical systems running for industrial, commercial, and government
+          customers. Power, water, cooling, controls — if it's essential,
+          recurring, compliance-driven, and the customer cannot afford downtime,
+          it fits.
         </motion.p>
 
         <motion.div

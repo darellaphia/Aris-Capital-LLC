@@ -5,29 +5,29 @@ const markets = [
   {
     num: '01',
     state: 'Texas',
-    drivers: 'Data Centers · Oilfield Electrification · Population Growth',
-    cities: 'Houston (primary), DFW, Austin/SA, West TX',
+    drivers: 'Data Centers · Oilfield Electrification · Population Growth · Manufacturing',
+    cities: 'Houston (primary), Dallas-Fort Worth, Austin/San Antonio, West Texas/Permian Basin',
     primary: true,
   },
   {
     num: '02',
-    state: 'Georgia',
-    drivers: 'Data Centers · Logistics · Manufacturing',
-    cities: 'Atlanta, Douglas County, Lithia Springs, Savannah',
+    state: 'North Carolina',
+    drivers: 'Data Centers · Semiconductor Fabs · Manufacturing Reshoring',
+    cities: 'Research Triangle, Charlotte metro, Raleigh-Durham, Greensboro corridor',
     primary: false,
   },
   {
     num: '03',
-    state: 'Arizona',
-    drivers: 'Data Centers · Semiconductor Fabs · Cooling Load',
-    cities: 'Phoenix, Mesa, Chandler, Goodyear',
+    state: 'Georgia',
+    drivers: 'Data Centers · Logistics · Manufacturing',
+    cities: 'Atlanta metro, Douglas County, Lithia Springs, Savannah',
     primary: false,
   },
   {
     num: '04',
-    state: 'Virginia',
-    drivers: 'Data Centers',
-    cities: 'Ashburn, Loudoun County, Prince William County',
+    state: 'Arizona',
+    drivers: 'Data Centers · Semiconductor Fabs · Cooling Load · Population Growth',
+    cities: 'Phoenix, Mesa, Chandler, Goodyear',
     primary: false,
   },
 ]
@@ -97,9 +97,10 @@ export function Markets() {
         {/* Note */}
         <FadeIn delay={0.3}>
           <p className="mt-10 text-xs italic text-steel-light">
-            Texas is our primary market. Georgia, Arizona, and Virginia are secondary markets
-            selected based on overlapping data center growth, industrial expansion, and
-            SBA-eligible deal flow.
+            Texas is the primary geographic focus — Houston leads as the energy capital of the
+            U.S. North Carolina, Georgia, and Arizona round out the target markets based on
+            data center growth, semiconductor manufacturing, and population-driven infrastructure
+            demand.
           </p>
         </FadeIn>
       </div>

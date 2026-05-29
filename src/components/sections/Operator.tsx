@@ -10,10 +10,10 @@ const tags = [
 ]
 
 const pillars = [
-  { label: 'Sales Leadership', detail: '10+ years enterprise sales and revenue leadership across technology and services verticals.' },
-  { label: 'Project Management', detail: 'Fortune 500-trained PM methodology applied to deal execution, transitions, and operations.' },
-  { label: 'Entrepreneurship', detail: 'Founder and CEO of Cresco Consult LLC — understands what builders need from a buyer.' },
-  { label: 'Energy Roots', detail: 'Grew up around Egbin Power Station, Nigeria. This is not a thesis — it is lived context.' },
+  { label: 'Sales Leadership', detail: 'General Sales Manager + Finance Manager — P&L ownership, team management, deal execution.' },
+  { label: 'Project Management', detail: 'Senior IT PM at Fortune 500 — large-scale program delivery, stakeholder management.' },
+  { label: 'Entrepreneurship', detail: 'Founder & CEO, Cresco Consult LLC — federal contracting, BD, vendor and contract management.' },
+  { label: 'Energy Roots', detail: 'First 20 years around one of Nigeria\'s largest thermal power stations — father retired as Instrumentation & Control Engineer.' },
 ]
 
 function FadeIn({ children, delay = 0, className = '' }: { children: React.ReactNode; delay?: number; className?: string }) {
@@ -74,7 +74,7 @@ export function Operator() {
             <FadeIn delay={0.2}>
               <blockquote className="border-l-2 border-teal pl-5 mb-8">
                 <p className="text-lg italic text-navy leading-relaxed">
-                  "Energy infrastructure is not a sector I discovered. It is one I grew up inside."
+                  "I grew up around infrastructure that couldn't fail. That's what I buy."
                 </p>
               </blockquote>
             </FadeIn>
@@ -82,9 +82,10 @@ export function Operator() {
             <FadeIn delay={0.25}>
               <p className="section-body mb-4">
                 Dare Ayansola is the founder and managing principal of Aris Capital LLC. He grew up
-                around one of the largest thermal power stations in Nigeria — his father spent his
-                career there as an instrumentation and control engineer. Energy infrastructure is not
-                a sector he discovered. It is one he grew up inside.
+                around one of Nigeria's largest thermal power stations — his father retired as an
+                instrumentation and control engineer. Infrastructure that couldn't fail. That shaped
+                the thesis, and that is what Aris Capital acquires: essential infrastructure service
+                businesses that keep critical systems running.
               </p>
             </FadeIn>
             <FadeIn delay={0.3}>
