@@ -1,5 +1,6 @@
 import { Nav } from './components/sections/Nav'
 import { Hero } from './components/sections/Hero'
+import { Thesis } from './components/sections/Thesis'
 import { Pillars } from './components/sections/Pillars'
 import { Operator } from './components/sections/Operator'
 import { Process } from './components/sections/Process'
@@ -14,6 +15,7 @@ function App() {
       <Nav />
       <main>
         <Hero />
+        <Thesis />
         <Pillars />
         <Operator />
         <Process />
